@@ -1,8 +1,11 @@
 package entities;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class Pessoa {
 	protected String tipo;
@@ -10,9 +13,11 @@ public class Pessoa {
 	public Pessoa(String tipo) {
 		this.tipo = tipo;
 	}
-	
+
 	public static void visualizarProdutos() {
-		try (BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\vanes\\git\\Trabalho-Compras-JSON\\3. TRABALHO POO - COMPRAS\\Estoque\\estoque.json"))) {
+		String caminhoArquivoProdutos = "C:\\Users\\vanes\\git\\Trabalho-Compras-JSON\\3. TRABALHO POO - COMPRAS\\estoque.json";
+		
+		try (BufferedReader br = new BufferedReader(new FileReader(caminhoArquivoProdutos))) {
             String linha;
             while ((linha = br.readLine()) != null) {
                 System.out.println(linha);
@@ -21,8 +26,5 @@ public class Pessoa {
             e.printStackTrace();
         }
 	}
-	
-	public void comprarProduto() {
-		//nao pode comprar mais do que tiver no estoque
-	}
+
 }
