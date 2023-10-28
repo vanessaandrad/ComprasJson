@@ -53,7 +53,7 @@ public class Main {
 				Administrador.adicionarProduto();
 			}
 			else if(opcao_submenu_admin == 3) {
-				//editar produto
+				Administrador.editarProduto();
 			}
 			else if(opcao_submenu_admin == 4) {
 				//remover produto
