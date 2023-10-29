@@ -2,7 +2,7 @@ package util;
 
 public class Tela {
 	public static void telaInicialAdmin() {
-		System.out.println("===== MENU ADMIN =====");
+		System.out.println("===== MENU ADMINISTRADOR =====");
 		System.out.println();
 		System.out.println("1- VISUALIZAR ESTOQUE");
 		System.out.println("2- CADASTRAR PRODUTO");
